@@ -1,6 +1,7 @@
 #pragma once
 #include <stdint.h>
 
+#define WORD_LENGTH                 8
 #define ADDRESS_SPACE               16
 
 #define ROM_BANK_00_OFF             0x0000
@@ -15,3 +16,6 @@
 #define IO_REGISTERS_OFF            0xFF00
 #define HRAM_OFF                    0xFF80
 #define INT_ENABLE_REGISTER_OFF     0xFFFF
+
+uint8_t *init_memory(void);
+void destroy_memory(uint8_t *memory);
